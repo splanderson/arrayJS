@@ -115,9 +115,6 @@ function finder(numbers){
   return status;
 }
 
-  //Code Here
-
-
 //Next problem
 
 
@@ -125,7 +122,22 @@ function finder(numbers){
 var str = 'this is my sentence';
 //Write a function called reverse that takes a given str as it's only argument and returns that string after it's been reversed
 
-  //Code Here
+// function reverse(str){
+//   var splitString = str.split(' ');
+//   var reverseArray = splitString.reverse();
+//   var joinArray = reverseArray.join(' ');
+//   return joinArray;
+// }
+//
+// reverse(str);
+
+function reverse(str){
+  var splitString = str.split('').reverse().join('');
+  str = splitString;
+  return str;
+}
+
+reverse(str);
 
 
 //Next Problem
