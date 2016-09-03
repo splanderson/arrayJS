@@ -161,27 +161,16 @@ var myGroceryList = ['chips', 'pizza', 'hotpockets', 'MtnDew', 'corndogs'];
 */
 
 function removeItem(myGroceryList, groceryItem){
+  if(!myGroceryList){
+    return [];
+  }
   for(var i = 0; i < myGroceryList.length; i++){
-    if(groceryItem === null){
-      return myGroceryList = [];
-    }
-    else if(myGroceryList[i] === groceryItem){
+    if(myGroceryList[i] === groceryItem){
     myGroceryList.splice(groceryItem, 1);
     }
-  // return myGroceryList;
   }
   return myGroceryList;
 }
-
-// function removeItem(myGroceryList, groceryItem){
-//   var groceryList = myGroceryList;
-//   for(var i = 0; i < groceryList.length; i++){
-//     if(groceryList[i] === groceryItem){
-//       groceryList.splice(groceryList[i], 1);
-//     }
-//   }
-//   return groceryList;
-// }
 
 removeItem(myGroceryList, 'chips') //--> ['pizza', 'hotpockets', 'MtnDew', 'corndogs'];
 //addItem(myGroceryList, 'Jerky') //--> ['pizza', 'hotpockets', 'MtnDew', 'corndogs', 'Jerky'];
@@ -213,11 +202,15 @@ var numbers = [5, '9', 16, 19, '25', '34', 48];
 
 function addTen(numbers){
   var newNumbers = [];
-  numbers = parseInt(numbers);
   for(var i = 0; i < numbers.length; i++){
-    newNumbers.push(numbers[i]);
-    return newNumbers;
+    if(typeof numbers[i] === 'string'){
+      newNumbers.push(parseInt(numbers[i]) + 10);
+    }
+    else {
+      newNumbers.push(numbers[i] + 10);
+    }
   }
+  return newNumbers;
 }
 
 addTen(numbers);
