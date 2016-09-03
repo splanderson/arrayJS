@@ -163,13 +163,14 @@ var myGroceryList = ['chips', 'pizza', 'hotpockets', 'MtnDew', 'corndogs'];
 function removeItem(myGroceryList, groceryItem){
   for(var i = 0; i < myGroceryList.length; i++){
     if(groceryItem === null){
-      return myGroceryList = 0;
+      return myGroceryList = [];
     }
     else if(myGroceryList[i] === groceryItem){
     myGroceryList.splice(groceryItem, 1);
     }
-  return myGroceryList;
+  // return myGroceryList;
   }
+  return myGroceryList;
 }
 
 // function removeItem(myGroceryList, groceryItem){
@@ -210,19 +211,19 @@ var numbers = [5, '9', 16, 19, '25', '34', 48];
 //Write a function called addTen that is given 'numbers' as it's only argument and returns a new
 //array after adding ten to each item in numbers. *Verify your answer is correct. --> [15, 19, 26, 29, 35, 44, 58]
 
-// function addTen(numbers){
-//   var newNumbers = [];
-//   for(var i = 0; i > numbers.length; i++){
-//     parseInt(numbers[i] + 10);
-//     numbers.splice(numbers[i], 1);
-//   }
-//   return newNumbers;
-// }
+function addTen(numbers){
+  var newNumbers = [];
+  numbers = parseInt(numbers);
+  for(var i = 0; i < numbers.length; i++){
+    newNumbers.push(numbers[i]);
+    return newNumbers;
+  }
+}
+
+addTen(numbers);
 
 
 //Next Problem
-
-
 
 var num1 = Math.floor(Math.random() * (30 - 0) + 0);
 var num2 = Math.floor(Math.random() * (30 - 0) + 0);
