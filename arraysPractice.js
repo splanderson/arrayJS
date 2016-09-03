@@ -123,10 +123,11 @@ var str = 'this is my sentence';
 //Write a function called reverse that takes a given str as it's only argument and returns that string after it's been reversed
 
 // function reverse(str){
-//   var splitString = str.split(' ');
+//   var splitString = str.split('');
 //   var reverseArray = splitString.reverse();
-//   var joinArray = reverseArray.join(' ');
-//   return joinArray;
+//   var joinArray = reverseArray.join('');
+//   str = joinArray;
+//   return str;
 // }
 //
 // reverse(str);
@@ -159,10 +160,30 @@ var myGroceryList = ['chips', 'pizza', 'hotpockets', 'MtnDew', 'corndogs'];
   In both the removeItem function and the addItem function, you will also need to check for valid aurguments. Specrunner will try to call your functions without passing in valid aurguments. When this happens, you will need to respond by returning an empty array.
 */
 
-  //Code Here
+function removeItem(myGroceryList, groceryItem){
+  for(var i = 0; i < myGroceryList.length; i++){
+    if(groceryItem === null){
+      return myGroceryList = 0;
+    }
+    else if(myGroceryList[i] === groceryItem){
+    myGroceryList.splice(groceryItem, 1);
+    }
+  return myGroceryList;
+  }
+}
 
-//removeItem(myGroceryList, 'chips') --> ['pizza', 'hotpockets', 'MtnDew', 'corndogs'];
-//addItem(myGroceryList, 'Jerky') --> ['pizza', 'hotpockets', 'MtnDew', 'corndogs', 'Jerky'];
+// function removeItem(myGroceryList, groceryItem){
+//   var groceryList = myGroceryList;
+//   for(var i = 0; i < groceryList.length; i++){
+//     if(groceryList[i] === groceryItem){
+//       groceryList.splice(groceryList[i], 1);
+//     }
+//   }
+//   return groceryList;
+// }
+
+removeItem(myGroceryList, 'chips') //--> ['pizza', 'hotpockets', 'MtnDew', 'corndogs'];
+//addItem(myGroceryList, 'Jerky') //--> ['pizza', 'hotpockets', 'MtnDew', 'corndogs', 'Jerky'];
 
 
 
@@ -172,9 +193,15 @@ var myGroceryList = ['chips', 'pizza', 'hotpockets', 'MtnDew', 'corndogs'];
 
 //Write a function called maker that creates an array, fills that array with numbers from 1 to 215, then returns the array.
 
-  //Code Here
+function maker(){
+  var numsMaker = [];
+  for(var i = 1; i < 216; i++){
+  numsMaker.push(i);
+  }
+  return numsMaker;
+}
 
-
+maker();
 
 //Next Problem
 
@@ -183,8 +210,14 @@ var numbers = [5, '9', 16, 19, '25', '34', 48];
 //Write a function called addTen that is given 'numbers' as it's only argument and returns a new
 //array after adding ten to each item in numbers. *Verify your answer is correct. --> [15, 19, 26, 29, 35, 44, 58]
 
-  //Code Here
-
+// function addTen(numbers){
+//   var newNumbers = [];
+//   for(var i = 0; i > numbers.length; i++){
+//     parseInt(numbers[i] + 10);
+//     numbers.splice(numbers[i], 1);
+//   }
+//   return newNumbers;
+// }
 
 
 //Next Problem
