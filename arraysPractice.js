@@ -172,8 +172,24 @@ function removeItem(myGroceryList, groceryItem){
   return myGroceryList;
 }
 
+function addItem(myGroceryList, groceryItem){
+  if(!myGroceryList){
+    return [];
+  }
+  var match = false;
+  for(var i = 0; i < myGroceryList.length; i++){
+    if(myGroceryList[i] === groceryItem){
+      match = true;
+    }
+  }
+  if(match === false){
+    myGroceryList.push(groceryItem);
+  }
+  return myGroceryList;
+}
+
 removeItem(myGroceryList, 'chips') //--> ['pizza', 'hotpockets', 'MtnDew', 'corndogs'];
-//addItem(myGroceryList, 'Jerky') //--> ['pizza', 'hotpockets', 'MtnDew', 'corndogs', 'Jerky'];
+addItem(myGroceryList, 'Jerky') //--> ['pizza', 'hotpockets', 'MtnDew', 'corndogs', 'Jerky'];
 
 
 
